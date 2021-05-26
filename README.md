@@ -32,3 +32,19 @@ The components used was mostly purchased from Aliexpress, small components like 
 - General signal diode: e.g. 1N4148
 - Vibro motor from old mobile phone
 - SPDT switch
+
+## Communication Protocol
+The Wifi Throttle send UDP messages to LokRemote every 250ms. Each packet is 5 bytes long. The Throttle sends these packets all the time regardless if the ignition switch is on or off. There is a response sent by LokRemote for each message sent by the Throttle. Since these are UDP messages delivery is no guaranteed, but as there are only 2 devices on the network, it is assumed that the loss will be minimal. If the LokRemote does not recieve a message for 2 seconds it will stop the loco.
+- Byte 0: direction byte, which is either 0 or 1 depending on the position of the Direction switch
+- Byte 1: Speed byte with value from 0 to 255. If the Ignition is switched off, the speed changes to 0
+- Byte 2: Lights: Bit7: headlights on/off, Bit6: light 3, Bit5: light 4
+- Byte 3: Sound id to be played
+- Byte 4: unused
+These messages are sent to the LokRemote IP address, and port which is configured in settings.h
+
+The response from LokRemote is 10 bytes, and a reponse is sent every time a message is received from the Throttle. The time between each message is measure by the Throttle and shown on the screen. Response sturcutre is:
+- Byte 0-1: Battery voltage * 10 as a 16 bit value where byte 0 is the upper 8 bit, and byte 1 is the lower 8 bit 
+- Byte 2-3: Motor 1 current * 10 (format same as battery)
+- Byte 4: Motor 1 temperature in celcius
+- Byte 5-6: Motor 2 current * 10 (format same as battery)
+- Byte 7: Motor 2 temperature in celcius
