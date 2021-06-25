@@ -4,7 +4,7 @@ This project is created for my Wifi LokRemote project (https://github.com/nygma2
 ![First version](/img/throttle1.jpg)
 
 You can also check out my video on how I am using this trhottle for my 7 1/4" gauge ride-on-loco:
-[![PCB prototype](https://img.youtube.com/vi/NFEwV57PYEw/0.jpg)](https://www.youtube.com/watch?v=NFEwV57PYEw)
+[![Prototype](https://img.youtube.com/vi/79uQtgcNUlQ/0.jpg)](https://www.youtube.com/watch?v=79uQtgcNUlQ)
 
 Also check the project for the main "receiver" here: https://github.com/nygma2004/Wifi_LokRemote
 
