@@ -19,6 +19,11 @@ V1.0
 - Wifi connection details hardcoded in the sketch, needs to be worked on
 - Create additional screen variants
 
+V1.1
+- New feautre: 4 screens created (switch between with A, B, C and D) to show all information / battery voltage / current draw / temperature information
+- New feature: Auto reconnect to wifi network when the connection is lost
+- Bug: headlights direction does not change the the drive direction changes (this is a bug in the receiver code)
+
 # Hardware
 The throttle is build on a custom PCB that you can order from PCBWay: ADD LINK HERE.
 The components used was mostly purchased from Aliexpress, small components like resistors were purchased from local shop.
