@@ -25,7 +25,7 @@ V1.1
 - Bug: headlights direction does not change the the drive direction changes (this is a bug in the receiver code)
 
 # Hardware
-The throttle is build on a custom PCB that you can order from PCBWay: ADD LINK HERE.
+The throttle is build on a custom PCB that you can order from PCBWay: https://www.pcbway.com/project/shareproject/Wifi_Throttle.html.
 The components used was mostly purchased from Aliexpress, small components like resistors were purchased from local shop.
 - ESP32 WROOM-32 model, on a 30-pin development board: https://www.aliexpress.com/item/32819056304.html (this is a 10 pcs listing)
 - Rotary Encoder: from local shop
